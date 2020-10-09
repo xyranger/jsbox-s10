@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-09 21:18:18
- * @LastEditTime: 2020-10-10 00:50:51
+ * @LastEditTime: 2020-10-10 00:51:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /s10/scripts/medium.js
@@ -15,7 +15,7 @@ function render(matches) {
         let resultView = {
             type: "text",
             props: {
-                text: m.status === -1 ? `未开始` : "进行中",
+                text: match.status === -1 ? `未开始` : "进行中",
                 bold: true,
                 font: {
                     // weight: "bold",
