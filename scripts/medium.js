@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-09 21:18:18
- * @LastEditTime: 2020-10-10 00:08:06
+ * @LastEditTime: 2020-10-10 00:50:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /s10/scripts/medium.js
@@ -9,18 +9,17 @@
 
 function render(matches) {
     if (matches.length > 0) {
-        const lastIndex = matches[0].matches.length - 1;
+        const lastIndex = matches[0].matches.findIndex(m => m.result === null);
+        console.log(lastIndex);
         const match = matches[0].matches[lastIndex];
-        console.log(match)
-
         let resultView = {
             type: "text",
             props: {
-                text: `未开始`,
+                text: m.status === -1 ? `未开始` : "进行中",
                 bold: true,
                 font: {
                     // weight: "bold",
-                    size: 6
+                    size: 26
                 }
             }
         };
@@ -79,7 +78,7 @@ function render(matches) {
                         {
                             type: "text",
                             props: {
-                                text: "（19:00）",
+                                text: `(${match.time})`,
                                 font: $font("bold", 18)
                             }
                         },

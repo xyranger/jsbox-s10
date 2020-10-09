@@ -1,12 +1,25 @@
 /*
  * @Author: your name
  * @Date: 2020-10-09 20:23:27
- * @LastEditTime: 2020-10-10 00:24:11
+ * @LastEditTime: 2020-10-10 00:29:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /jsbox-s10/MyScript 3.js
  */
 
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2)
+        month = '0' + month;
+    if (day.length < 2)
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
 
 async function getTodayMatches() {
     let matches = await $cache.getAsync({
@@ -14,12 +27,12 @@ async function getTodayMatches() {
     });
     if (!matches) {
         // https://gist.githubusercontent.com/xyranger/30c2bbeb820bb045317c1ccd78c3da26/raw/954938b42cb22c361b300f5cca0f1df8b53a1749/s10.json
-        const s10Url = 'https://gist.githubusercontent.com/xyranger/30c2bbeb820bb045317c1ccd78c3da26/raw/b178912dc333349ce549025d25230fd41e28f0ee/s10.json';
+        const s10Url = 'https://raw.githubusercontent.com/xyranger/jsbox-s10/master/s10.json';
         const result = await $http.get(s10Url);
         const data = result.data;
-        const today = new Date().toISOString().split('T')[0];
+        const today = formatDate(new Date());
+        console.log(today)
         matches = data.filter(d => d.day === today);
-        console.log(matches)
         await $cache.setAsync({
             key: "matches",
             value: matches

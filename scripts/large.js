@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-09 21:18:18
- * @LastEditTime: 2020-10-10 00:12:17
+ * @LastEditTime: 2020-10-10 00:46:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /s10/scripts/medium.js
@@ -13,11 +13,11 @@ function render(matches) {
             let resultView = {
                 type: "text",
                 props: {
-                    text: `未开始`,
+                    text: m.status === -1 ? `未开始` : "进行中",
                     bold: true,
                     font: {
                         // weight: "bold",
-                        size: 6
+                        size: 15
                     }
                 }
             };
@@ -29,7 +29,7 @@ function render(matches) {
                         bold: true,
                         font: {
                             // weight: "bold",
-                            size: 10
+                            size: 15
                         }
                     }
                 };
@@ -37,30 +37,33 @@ function render(matches) {
             return {
                 type: "hstack",
                 props: {
-                    alignment: $widget.alignment.left,
-                    // spacing: 5
+                    alignment: $widget.verticalAlignment.center,
+                    spacing: 85
                 },
                 views: [
                     {
-                        type: "text",
+                        type: "vstack",
                         props: {
-                            text: `${m.team[0]}`,
-                            font: {
-                                size: 12
+                            alignment: $widget.horizontalAlignment.center,
+                            spacing: 0
+                        },
+                        views: [
+                            {
+                                type: "image",
+                                props: {
+                                    path: `assets/${m.team[0]}_min.png`
+                                }
+                            },
+                            {
+                                type: "text",
+                                props: {
+                                    text: `${m.team[0]}`,
+                                    font: {
+                                        size: 10
+                                    }
+                                }
                             }
-                        }
-                    },
-                    {
-                        type: "image",
-                        props: {
-                            path: `assets/${m.team[0]}.png`
-                        }
-                    },
-                    {
-                        type: "spacer",
-                        props: {
-                            minLength: 50
-                        }
+                        ]
                     },
                     {
                         type: "vstack",
@@ -73,35 +76,39 @@ function render(matches) {
                             {
                                 type: "text",
                                 props: {
-                                    text: "(19:00)",
+                                    text: `(${m.time})`,
+                                    bold: true,
                                     font: {
-                                        size: 8
+                                        size: 12
                                     }
                                 }
                             }
                         ]
                     },
                     {
-                        type: "spacer",
+                        type: "vstack",
                         props: {
-                            minLength: 50
-                        }
-                    },
-                    {
-                        type: "image",
-                        props: {
-                            path: `assets/${m.team[1]}.png`
-                        }
-                    },
-                    {
-                        type: "text",
-                        props: {
-                            text: `${m.team[1]}`,
-                            font: {
-                                size: 12
+                            alignment: $widget.horizontalAlignment.center,
+                            spacing: 0
+                        },
+                        views: [
+                            {
+                                type: "image",
+                                props: {
+                                    path: `assets/${m.team[1]}_min.png`
+                                }
+                            },
+                            {
+                                type: "text",
+                                props: {
+                                    text: `${m.team[1]}`,
+                                    font: {
+                                        size: 10
+                                    }
+                                }
                             }
-                        }
-                    }
+                        ]
+                    },
                 ]
             }
         });
@@ -110,14 +117,10 @@ function render(matches) {
             props: {
                 rows: Array(6).fill({
                     flexible: {
-                        minimum: 10,
+                        minimum: 0,
                         maximum: Infinity
                     },
-                    // spacing: 10,
-                    // alignment: $widget.alignment.left
                 }),
-                // spacing: 10,
-                // alignment: $widget.verticalAlignment.center
             },
             views: views
         }
