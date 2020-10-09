@@ -1,0 +1,126 @@
+[
+    {
+      "day": "2020-10-09",
+      "matches": [
+        {
+          "time": "16:00",
+          "team": [
+            "PSG",
+            "DWG"
+          ],
+          "result": [
+            0,
+            1
+          ]
+        },
+        {
+          "time": "17:00",
+          "team": [
+            "RGE",
+            "JDG"
+          ],
+          "result": [
+            0,
+            1
+          ]
+        },
+        {
+          "time": "18:00",
+          "team": [
+            "DWG",
+            "RGE"
+          ],
+          "result": [
+            1,
+            0
+          ]
+        },
+        {
+          "time": "19:00",
+          "team": [
+            "JDG",
+            "PSG"
+          ],
+          "result": [
+            0,
+            1
+          ]
+        },
+        {
+          "time": "20:00",
+          "team": [
+            "PSG",
+            "RGE"
+          ],
+          "result": [
+            1,
+            0
+          ]
+        },
+        {
+          "time": "21:00",
+          "team": [
+            "JDG",
+            "DWG"
+          ],
+          "result": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "day": "2020-10-10",
+      "matches": [
+        {
+          "time": "16:00",
+          "team": [
+            "FNC",
+            "TSM"
+          ],
+          "result": null
+        },
+        {
+          "time": "17:00",
+          "team": [
+            "LGD",
+            "GEN"
+          ],
+          "result": null
+        },
+        {
+          "time": "18:00",
+          "team": [
+            "TSM",
+            "GEN"
+          ],
+          "result": null
+        },
+        {
+          "time": "19:00",
+          "team": [
+            "FNC",
+            "LGD"
+          ],
+          "result": null
+        },
+        {
+          "time": "20:00",
+          "team": [
+            "LGD",
+            "TSM"
+          ],
+          "result": null
+        },
+        {
+          "time": "21:00",
+          "team": [
+            "GEN",
+            "FNC"
+          ],
+          "result": null
+        }
+      ]
+    }
+  ]
