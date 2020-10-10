@@ -137,5 +137,162 @@
                 "status": -1
             }
         ]
+    },
+    {
+        "day": "2020-10-11",
+        "matches": [
+            {
+                "time": "16:00",
+                "team": [
+                    "FLY",
+                    "DRX"
+                ],
+                "result": null,
+                "status": -1
+            },
+            {
+                "time": "17:00",
+                "team": [
+                    "UOL",
+                    "TES"
+                ],
+                "result": null,
+                "status": -1
+            },
+            {
+                "time": "18:00",
+                "team": [
+                    "DRX",
+                    "UOL"
+                ],
+                "result": null,
+                "status": -1
+            },
+            {
+                "time": "19:00",
+                "team": [
+                    "TES",
+                    "FLY"
+                ],
+                "result": null,
+                "status": -1
+            },
+            {
+                "time": "20:00",
+                "team": [
+                    "UOL",
+                    "FLY"
+                ],
+                "result": null,
+                "status": -1
+            },
+            {
+                "time": "21:00",
+                "team": [
+                    "DRX",
+                    "TES"
+                ],
+                "result": null,
+                "status": -1
+            }
+        ]
+    },
+    {
+        "day": "2020-10-15",
+        "matches": [
+            {
+                "time": "18:00",
+                "team": [
+                    "TBD",
+                    "TBD"
+                ],
+                "result": null,
+                "status": -1
+            }
+        ]
+    },
+    {
+        "day": "2020-10-16",
+        "matches": [
+            {
+                "time": "18:00",
+                "team": [
+                    "TBD",
+                    "TBD"
+                ],
+                "result": null,
+                "status": -1
+            }
+        ]
+    },
+    {
+        "day": "2020-10-17",
+        "matches": [
+            {
+                "time": "18:00",
+                "team": [
+                    "TBD",
+                    "TBD"
+                ],
+                "result": null,
+                "status": -1
+            }
+        ]
+    },
+    {
+        "day": "2020-10-18",
+        "matches": [
+            {
+                "time": "18:00",
+                "team": [
+                    "TBD",
+                    "TBD"
+                ],
+                "result": null,
+                "status": -1
+            }
+        ]
+    },
+    {
+        "day": "2020-10-24",
+        "matches": [
+            {
+                "time": "18:00",
+                "team": [
+                    "TBD",
+                    "TBD"
+                ],
+                "result": null,
+                "status": -1
+            }
+        ]
+    },
+    {
+        "day": "2020-10-25",
+        "matches": [
+            {
+                "time": "18:00",
+                "team": [
+                    "TBD",
+                    "TBD"
+                ],
+                "result": null,
+                "status": -1
+            }
+        ]
+    },
+    {
+        "day": "2020-10-31",
+        "matches": [
+            {
+                "time": "18:00",
+                "team": [
+                    "TBD",
+                    "TBD"
+                ],
+                "result": null,
+                "status": -1
+            }
+        ]
     }
 ]
