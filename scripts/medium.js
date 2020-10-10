@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-09 21:18:18
- * @LastEditTime: 2020-10-10 00:53:21
+ * @LastEditTime: 2020-10-10 14:55:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /s10/scripts/medium.js
@@ -11,7 +11,6 @@ function render(matches) {
     if (matches.length > 0) {
         const lastIndex = matches[0].matches.findIndex(m => m.result === null);
         const match = matches[0].matches[lastIndex];
-        console.log(match.status)
         let resultView = {
             type: "text",
             props: {
@@ -78,7 +77,7 @@ function render(matches) {
                         {
                             type: "text",
                             props: {
-                                text: `(${match.time})`,
+                                text: new Date().toLocaleTimeString(),
                                 font: $font("bold", 18)
                             }
                         },

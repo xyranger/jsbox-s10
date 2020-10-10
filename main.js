@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-09 20:23:27
- * @LastEditTime: 2020-10-10 00:54:25
+ * @LastEditTime: 2020-10-10 15:16:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /jsbox-s10/MyScript 3.js
@@ -32,7 +32,6 @@ async function getTodayMatches() {
         const data = result.data;
         const today = formatDate(new Date());
         matches = data.filter(d => d.day === today);
-        console.log(matches)
         await $cache.setAsync({
             key: "matches",
             value: matches
@@ -45,30 +44,12 @@ $cache.clear();
 
 let matches = await getTodayMatches();
 
-var oldDate = new Date(),
-    expireDate = new Date(oldDate);
-expireDate.setMinutes(oldDate.getMinutes() + 10);
-
 $widget.setTimeline({
-    policy: {
-        afterDate: expireDate
-    },
     render: ctx => {
-        $cache.getAsync({
-            key: "lasyRenderTime",
-            handler: time => {
-                if (time !== expireDate) {
-                    expireDate.setMinutes(expireDate.getMinutes() + 10);
-                    $cache.set("lasyRenderTime", expireDate);
-                    if (time) {
-                        $cache.removeAsync("matches").then(() => {
-                            getTodayMatches().then(m => {
-                                matches = m;
-                            });
-                        });
-                    }
-                }
-            }
+        $cache.removeAsync("matches").then(() => {
+            getTodayMatches().then(m => {
+                matches = m;
+            });
         });
         const family = ctx.family;
         let jsPath = "";
