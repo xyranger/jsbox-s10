@@ -109,8 +109,11 @@
                     "TSM",
                     "GEN"
                 ],
-                "result": null,
-                "status": 0
+                "result": [
+                    0,
+                    1
+                ],
+                "status": 1
             },
             {
                 "time": "19:00",
@@ -118,8 +121,11 @@
                     "FNC",
                     "LGD"
                 ],
-                "result": null,
-                "status": -1
+                "result": [
+                    1,
+                    0
+                ],
+                "status": 0
             },
             {
                 "time": "20:00",
@@ -128,7 +134,7 @@
                     "TSM"
                 ],
                 "result": null,
-                "status": -1
+                "status": 0
             },
             {
                 "time": "21:00",
