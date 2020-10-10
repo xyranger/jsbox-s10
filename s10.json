@@ -133,7 +133,10 @@
                     "LGD",
                     "TSM"
                 ],
-                "result": null,
+                "result": [
+                    1,
+                    0
+                ],
                 "status": 0
             },
             {
@@ -143,7 +146,7 @@
                     "FNC"
                 ],
                 "result": null,
-                "status": -1
+                "status": 0
             }
         ]
     },
