@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-10-09 21:18:18
- * @LastEditTime: 2020-10-10 14:55:32
+ * @LastEditTime: 2020-10-10 16:36:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /s10/scripts/medium.js
@@ -77,7 +77,7 @@ function render(matches) {
                         {
                             type: "text",
                             props: {
-                                text: new Date().toLocaleTimeString(),
+                                text: `(${match.time})`,
                                 font: $font("bold", 18)
                             }
                         },
